@@ -1,0 +1,1781 @@
+17/04/15 01:04:01 INFO Utils: Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+17/04/15 01:04:01 WARN Utils: Your hostname, enigma resolves to a loopback address: 127.0.1.1; using 10.145.210.31 instead (on interface wlp9s0)
+17/04/15 01:04:01 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+17/04/15 01:04:02 INFO Slf4jLogger: Slf4jLogger started
+17/04/15 01:04:02 INFO Remoting: Starting remoting
+17/04/15 01:04:02 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://spark@10.145.210.31:37501]
+17/04/15 01:04:02 INFO Remoting: Remoting now listens on addresses: [akka.tcp://spark@10.145.210.31:37501]
+17/04/15 01:04:02 INFO SparkEnv: Registering BlockManagerMaster
+17/04/15 01:04:02 INFO DiskBlockManager: Created local directory at /tmp/spark-local-20170415010402-34b5
+17/04/15 01:04:02 INFO MemoryStore: MemoryStore started with capacity 786.3 MB.
+17/04/15 01:04:02 INFO ConnectionManager: Bound socket to port 44263 with id = ConnectionManagerId(10.145.210.31,44263)
+17/04/15 01:04:02 INFO BlockManagerMaster: Trying to register BlockManager
+17/04/15 01:04:02 INFO BlockManagerMasterActor$BlockManagerInfo: Registering block manager 10.145.210.31:44263 with 786.3 MB RAM
+17/04/15 01:04:02 INFO BlockManagerMaster: Registered BlockManager
+17/04/15 01:04:02 INFO HttpServer: Starting HTTP Server
+17/04/15 01:04:02 INFO HttpBroadcast: Broadcast server started at http://10.145.210.31:41435
+17/04/15 01:04:02 INFO SparkEnv: Registering MapOutputTracker
+17/04/15 01:04:02 INFO HttpFileServer: HTTP File server directory is /tmp/spark-64484142-49bb-47bb-878d-12440c73b4aa
+17/04/15 01:04:02 INFO HttpServer: Starting HTTP Server
+17/04/15 01:04:02 INFO SparkUI: Started Spark Web UI at http://10.145.210.31:4040
+17/04/15 01:04:02 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/04/15 01:04:03 INFO MemoryStore: ensureFreeSpace(154213) called with curMem=0, maxMem=824495308
+17/04/15 01:04:03 INFO MemoryStore: Block broadcast_0 stored as values to memory (estimated size 150.6 KB, free 786.2 MB)
+17/04/15 01:04:03 INFO FileInputFormat: Total input paths to process : 1
+17/04/15 01:04:03 INFO SparkContext: Starting job: reduce at LouvainCore.scala:67
+17/04/15 01:04:03 INFO DAGScheduler: Registering RDD 6 (map at GraphImpl.scala:393)
+17/04/15 01:04:03 INFO DAGScheduler: Registering RDD 20 (mapPartitions at RoutingTable.scala:51)
+17/04/15 01:04:03 INFO DAGScheduler: Registering RDD 28 (zipPartitions at ReplicatedVertexView.scala:119)
+17/04/15 01:04:03 INFO DAGScheduler: Registering RDD 31 (zipPartitions at GraphImpl.scala:218)
+17/04/15 01:04:03 INFO DAGScheduler: Got job 0 (reduce at LouvainCore.scala:67) with 1 output partitions (allowLocal=false)
+17/04/15 01:04:03 INFO DAGScheduler: Final stage: Stage 0 (reduce at LouvainCore.scala:67)
+17/04/15 01:04:03 INFO DAGScheduler: Parents of final stage: List(Stage 1, Stage 2)
+17/04/15 01:04:03 INFO DAGScheduler: Missing parents: List(Stage 1, Stage 2)
+17/04/15 01:04:03 INFO DAGScheduler: Submitting Stage 1 (MappedRDD[6] at map at GraphImpl.scala:393), which has no missing parents
+17/04/15 01:04:03 INFO DAGScheduler: Submitting 1 missing tasks from Stage 1 (MappedRDD[6] at map at GraphImpl.scala:393)
+17/04/15 01:04:03 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks
+17/04/15 01:04:03 INFO DAGScheduler: Submitting Stage 4 (MapPartitionsRDD[20] at mapPartitions at RoutingTable.scala:51), which has no missing parents
+17/04/15 01:04:03 INFO TaskSetManager: Starting task 1.0:0 as TID 0 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:03 INFO DAGScheduler: Submitting 1 missing tasks from Stage 4 (MapPartitionsRDD[20] at mapPartitions at RoutingTable.scala:51)
+17/04/15 01:04:03 INFO TaskSchedulerImpl: Adding task set 4.0 with 1 tasks
+17/04/15 01:04:03 INFO TaskSetManager: Serialized task 1.0:0 as 2145 bytes in 5 ms
+17/04/15 01:04:03 INFO Executor: Running task ID 0
+17/04/15 01:04:03 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:03 INFO CacheManager: Partition rdd_3_0 not found, computing it
+17/04/15 01:04:03 INFO HadoopRDD: Input split: file:/home/kaustubh/GitHub/2others/spark-distributed-louvain-modularity/dga-graphx/examples/small_edges.tsv:0+67
+17/04/15 01:04:03 INFO MemoryStore: ensureFreeSpace(1824) called with curMem=154213, maxMem=824495308
+17/04/15 01:04:03 INFO MemoryStore: Block rdd_3_0 stored as values to memory (estimated size 1824.0 B, free 786.2 MB)
+17/04/15 01:04:03 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_3_0 in memory on 10.145.210.31:44263 (size: 1824.0 B, free: 786.3 MB)
+17/04/15 01:04:03 INFO BlockManagerMaster: Updated info of block rdd_3_0
+17/04/15 01:04:03 INFO Executor: Serialized size of result for 0 is 749
+17/04/15 01:04:03 INFO Executor: Sending result for 0 directly to driver
+17/04/15 01:04:03 INFO Executor: Finished task ID 0
+17/04/15 01:04:03 INFO TaskSetManager: Starting task 4.0:0 as TID 1 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:03 INFO TaskSetManager: Serialized task 4.0:0 as 2116 bytes in 0 ms
+17/04/15 01:04:03 INFO Executor: Running task ID 1
+17/04/15 01:04:03 INFO TaskSetManager: Finished TID 0 in 122 ms on localhost (progress: 0/1)
+17/04/15 01:04:03 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:03 INFO DAGScheduler: Completed ShuffleMapTask(1, 0)
+17/04/15 01:04:03 INFO BlockManager: Found block rdd_3_0 locally
+17/04/15 01:04:03 INFO DAGScheduler: Stage 1 (map at GraphImpl.scala:393) finished in 0.132 s
+17/04/15 01:04:03 INFO TaskSchedulerImpl: Remove TaskSet 1.0 from pool 
+17/04/15 01:04:03 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:03 INFO Executor: Serialized size of result for 1 is 749
+17/04/15 01:04:03 INFO Executor: Sending result for 1 directly to driver
+17/04/15 01:04:03 INFO Executor: Finished task ID 1
+17/04/15 01:04:03 INFO TaskSetManager: Finished TID 1 in 13 ms on localhost (progress: 0/1)
+17/04/15 01:04:03 INFO TaskSchedulerImpl: Remove TaskSet 4.0 from pool 
+17/04/15 01:04:03 INFO DAGScheduler: running: Set(Stage 4)
+17/04/15 01:04:03 INFO DAGScheduler: waiting: Set(Stage 0, Stage 2, Stage 3)
+17/04/15 01:04:03 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:03 INFO DAGScheduler: Missing parents for Stage 0: List(Stage 2)
+17/04/15 01:04:03 INFO DAGScheduler: Missing parents for Stage 2: List(Stage 3)
+17/04/15 01:04:03 INFO DAGScheduler: Missing parents for Stage 3: List(Stage 4)
+17/04/15 01:04:03 INFO DAGScheduler: Completed ShuffleMapTask(4, 0)
+17/04/15 01:04:03 INFO DAGScheduler: Stage 4 (mapPartitions at RoutingTable.scala:51) finished in 0.137 s
+17/04/15 01:04:03 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:03 INFO DAGScheduler: running: Set()
+17/04/15 01:04:03 INFO DAGScheduler: waiting: Set(Stage 0, Stage 2, Stage 3)
+17/04/15 01:04:03 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:03 INFO DAGScheduler: Missing parents for Stage 0: List(Stage 2)
+17/04/15 01:04:03 INFO DAGScheduler: Missing parents for Stage 2: List(Stage 3)
+17/04/15 01:04:03 INFO DAGScheduler: Missing parents for Stage 3: List()
+17/04/15 01:04:03 INFO DAGScheduler: Submitting Stage 3 (ZippedPartitionsRDD2[28] at zipPartitions at ReplicatedVertexView.scala:119), which is now runnable
+17/04/15 01:04:03 INFO DAGScheduler: Submitting 1 missing tasks from Stage 3 (ZippedPartitionsRDD2[28] at zipPartitions at ReplicatedVertexView.scala:119)
+17/04/15 01:04:03 INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks
+17/04/15 01:04:03 INFO TaskSetManager: Starting task 3.0:0 as TID 2 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:03 INFO TaskSetManager: Serialized task 3.0:0 as 2654 bytes in 1 ms
+17/04/15 01:04:03 INFO Executor: Running task ID 2
+17/04/15 01:04:03 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:03 INFO CacheManager: Partition rdd_22_0 not found, computing it
+17/04/15 01:04:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 0 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  4 ms
+17/04/15 01:04:03 INFO MemoryStore: ensureFreeSpace(152) called with curMem=156037, maxMem=824495308
+17/04/15 01:04:03 INFO MemoryStore: Block rdd_22_0 stored as values to memory (estimated size 152.0 B, free 786.2 MB)
+17/04/15 01:04:03 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_22_0 in memory on 10.145.210.31:44263 (size: 152.0 B, free: 786.3 MB)
+17/04/15 01:04:03 INFO BlockManagerMaster: Updated info of block rdd_22_0
+17/04/15 01:04:03 INFO CacheManager: Partition rdd_9_0 not found, computing it
+17/04/15 01:04:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:03 INFO MemoryStore: ensureFreeSpace(1176) called with curMem=156189, maxMem=824495308
+17/04/15 01:04:03 INFO MemoryStore: Block rdd_9_0 stored as values to memory (estimated size 1176.0 B, free 786.1 MB)
+17/04/15 01:04:03 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_9_0 in memory on 10.145.210.31:44263 (size: 1176.0 B, free: 786.3 MB)
+17/04/15 01:04:03 INFO BlockManagerMaster: Updated info of block rdd_9_0
+17/04/15 01:04:03 INFO Executor: Serialized size of result for 2 is 964
+17/04/15 01:04:03 INFO Executor: Sending result for 2 directly to driver
+17/04/15 01:04:03 INFO Executor: Finished task ID 2
+17/04/15 01:04:03 INFO TaskSetManager: Finished TID 2 in 46 ms on localhost (progress: 0/1)
+17/04/15 01:04:03 INFO TaskSchedulerImpl: Remove TaskSet 3.0 from pool 
+17/04/15 01:04:03 INFO DAGScheduler: Completed ShuffleMapTask(3, 0)
+17/04/15 01:04:03 INFO DAGScheduler: Stage 3 (zipPartitions at ReplicatedVertexView.scala:119) finished in 0.046 s
+17/04/15 01:04:03 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:03 INFO DAGScheduler: running: Set()
+17/04/15 01:04:03 INFO DAGScheduler: waiting: Set(Stage 0, Stage 2)
+17/04/15 01:04:03 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:03 INFO DAGScheduler: Missing parents for Stage 0: List(Stage 2)
+17/04/15 01:04:03 INFO DAGScheduler: Missing parents for Stage 2: List()
+17/04/15 01:04:03 INFO DAGScheduler: Submitting Stage 2 (ZippedPartitionsRDD2[31] at zipPartitions at GraphImpl.scala:218), which is now runnable
+17/04/15 01:04:03 INFO DAGScheduler: Submitting 1 missing tasks from Stage 2 (ZippedPartitionsRDD2[31] at zipPartitions at GraphImpl.scala:218)
+17/04/15 01:04:03 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks
+17/04/15 01:04:03 INFO TaskSetManager: Starting task 2.0:0 as TID 3 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:03 INFO TaskSetManager: Serialized task 2.0:0 as 3269 bytes in 1 ms
+17/04/15 01:04:03 INFO Executor: Running task ID 3
+17/04/15 01:04:03 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:03 INFO BlockManager: Found block rdd_3_0 locally
+17/04/15 01:04:03 INFO CacheManager: Partition rdd_30_0 not found, computing it
+17/04/15 01:04:03 INFO CacheManager: Partition rdd_23_0 not found, computing it
+17/04/15 01:04:03 INFO BlockManager: Found block rdd_3_0 locally
+17/04/15 01:04:03 INFO MemoryStore: ensureFreeSpace(904) called with curMem=157365, maxMem=824495308
+17/04/15 01:04:03 INFO MemoryStore: Block rdd_23_0 stored as values to memory (estimated size 904.0 B, free 786.1 MB)
+17/04/15 01:04:03 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_23_0 in memory on 10.145.210.31:44263 (size: 904.0 B, free: 786.3 MB)
+17/04/15 01:04:03 INFO BlockManagerMaster: Updated info of block rdd_23_0
+17/04/15 01:04:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:03 INFO MemoryStore: ensureFreeSpace(1248) called with curMem=158269, maxMem=824495308
+17/04/15 01:04:03 INFO MemoryStore: Block rdd_30_0 stored as values to memory (estimated size 1248.0 B, free 786.1 MB)
+17/04/15 01:04:03 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_30_0 in memory on 10.145.210.31:44263 (size: 1248.0 B, free: 786.3 MB)
+17/04/15 01:04:03 INFO BlockManagerMaster: Updated info of block rdd_30_0
+17/04/15 01:04:03 INFO Executor: Serialized size of result for 3 is 964
+17/04/15 01:04:03 INFO Executor: Sending result for 3 directly to driver
+17/04/15 01:04:03 INFO Executor: Finished task ID 3
+17/04/15 01:04:03 INFO TaskSetManager: Finished TID 3 in 27 ms on localhost (progress: 0/1)
+17/04/15 01:04:03 INFO DAGScheduler: Completed ShuffleMapTask(2, 0)
+17/04/15 01:04:03 INFO DAGScheduler: Stage 2 (zipPartitions at GraphImpl.scala:218) finished in 0.025 s
+17/04/15 01:04:03 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:03 INFO DAGScheduler: running: Set()
+17/04/15 01:04:03 INFO DAGScheduler: waiting: Set(Stage 0)
+17/04/15 01:04:03 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:03 INFO TaskSchedulerImpl: Remove TaskSet 2.0 from pool 
+17/04/15 01:04:03 INFO DAGScheduler: Missing parents for Stage 0: List()
+17/04/15 01:04:03 INFO DAGScheduler: Submitting Stage 0 (MappedRDD[67] at map at LouvainCore.scala:67), which is now runnable
+17/04/15 01:04:03 INFO DAGScheduler: Submitting 1 missing tasks from Stage 0 (MappedRDD[67] at map at LouvainCore.scala:67)
+17/04/15 01:04:03 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+17/04/15 01:04:03 INFO TaskSetManager: Starting task 0.0:0 as TID 4 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:03 INFO TaskSetManager: Serialized task 0.0:0 as 3196 bytes in 0 ms
+17/04/15 01:04:03 INFO Executor: Running task ID 4
+17/04/15 01:04:03 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:03 INFO CacheManager: Partition rdd_35_0 not found, computing it
+17/04/15 01:04:03 INFO BlockManager: Found block rdd_9_0 locally
+17/04/15 01:04:03 INFO BlockManager: Found block rdd_9_0 locally
+17/04/15 01:04:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:03 INFO MemoryStore: ensureFreeSpace(1608) called with curMem=159517, maxMem=824495308
+17/04/15 01:04:03 INFO MemoryStore: Block rdd_35_0 stored as values to memory (estimated size 1608.0 B, free 786.1 MB)
+17/04/15 01:04:03 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_35_0 in memory on 10.145.210.31:44263 (size: 1608.0 B, free: 786.3 MB)
+17/04/15 01:04:03 INFO BlockManagerMaster: Updated info of block rdd_35_0
+17/04/15 01:04:03 INFO Executor: Serialized size of result for 4 is 934
+17/04/15 01:04:03 INFO Executor: Sending result for 4 directly to driver
+17/04/15 01:04:03 INFO Executor: Finished task ID 4
+17/04/15 01:04:03 INFO TaskSetManager: Finished TID 4 in 14 ms on localhost (progress: 0/1)
+17/04/15 01:04:03 INFO TaskSchedulerImpl: Remove TaskSet 0.0 from pool 
+17/04/15 01:04:03 INFO DAGScheduler: Completed ResultTask(0, 0)
+17/04/15 01:04:03 INFO DAGScheduler: Stage 0 (reduce at LouvainCore.scala:67) finished in 0.013 s
+17/04/15 01:04:03 INFO SparkContext: Job finished: reduce at LouvainCore.scala:67, took 0.407379777 s
+17/04/15 01:04:03 INFO MemoryStore: ensureFreeSpace(136) called with curMem=161125, maxMem=824495308
+17/04/15 01:04:03 INFO MemoryStore: Block broadcast_1 stored as values to memory (estimated size 136.0 B, free 786.1 MB)
+17/04/15 01:04:03 INFO SparkContext: Starting job: reduce at VertexRDD.scala:91
+17/04/15 01:04:03 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 136 bytes
+17/04/15 01:04:03 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 3 is 136 bytes
+17/04/15 01:04:03 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 2 is 136 bytes
+17/04/15 01:04:03 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 136 bytes
+17/04/15 01:04:03 INFO DAGScheduler: Registering RDD 42 (map at GraphImpl.scala:84)
+17/04/15 01:04:03 INFO DAGScheduler: Registering RDD 46 (mapPartitions at RoutingTable.scala:51)
+17/04/15 01:04:03 INFO DAGScheduler: Registering RDD 59 (zipPartitions at ReplicatedVertexView.scala:119)
+17/04/15 01:04:03 INFO DAGScheduler: Registering RDD 68 (zipPartitions at GraphImpl.scala:218)
+17/04/15 01:04:03 INFO DAGScheduler: Got job 1 (reduce at VertexRDD.scala:91) with 1 output partitions (allowLocal=false)
+17/04/15 01:04:03 INFO DAGScheduler: Final stage: Stage 5 (reduce at VertexRDD.scala:91)
+17/04/15 01:04:03 INFO DAGScheduler: Parents of final stage: List(Stage 6, Stage 10, Stage 7)
+17/04/15 01:04:03 INFO DAGScheduler: Missing parents: List(Stage 10)
+17/04/15 01:04:03 INFO DAGScheduler: Submitting Stage 11 (MappedRDD[42] at map at GraphImpl.scala:84), which has no missing parents
+17/04/15 01:04:03 INFO DAGScheduler: Submitting 1 missing tasks from Stage 11 (MappedRDD[42] at map at GraphImpl.scala:84)
+17/04/15 01:04:03 INFO TaskSchedulerImpl: Adding task set 11.0 with 1 tasks
+17/04/15 01:04:03 INFO TaskSetManager: Starting task 11.0:0 as TID 5 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:03 INFO TaskSetManager: Serialized task 11.0:0 as 2213 bytes in 0 ms
+17/04/15 01:04:03 INFO Executor: Running task ID 5
+17/04/15 01:04:03 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:03 INFO BlockManager: Found block rdd_3_0 locally
+17/04/15 01:04:03 INFO Executor: Serialized size of result for 5 is 749
+17/04/15 01:04:03 INFO Executor: Sending result for 5 directly to driver
+17/04/15 01:04:03 INFO Executor: Finished task ID 5
+17/04/15 01:04:03 INFO TaskSetManager: Finished TID 5 in 9 ms on localhost (progress: 0/1)
+17/04/15 01:04:03 INFO TaskSchedulerImpl: Remove TaskSet 11.0 from pool 
+17/04/15 01:04:03 INFO DAGScheduler: Completed ShuffleMapTask(11, 0)
+17/04/15 01:04:03 INFO DAGScheduler: Stage 11 (map at GraphImpl.scala:84) finished in 0.004 s
+17/04/15 01:04:03 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:03 INFO DAGScheduler: running: Set()
+17/04/15 01:04:03 INFO DAGScheduler: waiting: Set(Stage 12, Stage 13, Stage 5, Stage 10)
+17/04/15 01:04:03 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:03 INFO DAGScheduler: Missing parents for Stage 12: List(Stage 13)
+17/04/15 01:04:03 INFO DAGScheduler: Missing parents for Stage 13: List()
+17/04/15 01:04:03 INFO DAGScheduler: Missing parents for Stage 5: List(Stage 10)
+17/04/15 01:04:03 INFO DAGScheduler: Missing parents for Stage 10: List(Stage 12)
+17/04/15 01:04:03 INFO DAGScheduler: Submitting Stage 13 (MapPartitionsRDD[46] at mapPartitions at RoutingTable.scala:51), which is now runnable
+17/04/15 01:04:03 INFO DAGScheduler: Submitting 1 missing tasks from Stage 13 (MapPartitionsRDD[46] at mapPartitions at RoutingTable.scala:51)
+17/04/15 01:04:03 INFO TaskSchedulerImpl: Adding task set 13.0 with 1 tasks
+17/04/15 01:04:03 INFO TaskSetManager: Starting task 13.0:0 as TID 6 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:03 INFO TaskSetManager: Serialized task 13.0:0 as 2057 bytes in 0 ms
+17/04/15 01:04:03 INFO Executor: Running task ID 6
+17/04/15 01:04:03 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:03 INFO CacheManager: Partition rdd_44_0 not found, computing it
+17/04/15 01:04:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:03 INFO MemoryStore: ensureFreeSpace(1824) called with curMem=161261, maxMem=824495308
+17/04/15 01:04:03 INFO MemoryStore: Block rdd_44_0 stored as values to memory (estimated size 1824.0 B, free 786.1 MB)
+17/04/15 01:04:03 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_44_0 in memory on 10.145.210.31:44263 (size: 1824.0 B, free: 786.3 MB)
+17/04/15 01:04:03 INFO BlockManagerMaster: Updated info of block rdd_44_0
+17/04/15 01:04:03 INFO Executor: Serialized size of result for 6 is 964
+17/04/15 01:04:03 INFO Executor: Sending result for 6 directly to driver
+17/04/15 01:04:03 INFO Executor: Finished task ID 6
+17/04/15 01:04:03 INFO TaskSetManager: Finished TID 6 in 13 ms on localhost (progress: 0/1)
+17/04/15 01:04:03 INFO TaskSchedulerImpl: Remove TaskSet 13.0 from pool 
+17/04/15 01:04:03 INFO DAGScheduler: Completed ShuffleMapTask(13, 0)
+17/04/15 01:04:03 INFO DAGScheduler: Stage 13 (mapPartitions at RoutingTable.scala:51) finished in 0.005 s
+17/04/15 01:04:03 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:03 INFO DAGScheduler: running: Set()
+17/04/15 01:04:03 INFO DAGScheduler: waiting: Set(Stage 12, Stage 5, Stage 10)
+17/04/15 01:04:03 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:03 INFO DAGScheduler: Missing parents for Stage 12: List()
+17/04/15 01:04:03 INFO DAGScheduler: Missing parents for Stage 5: List(Stage 10)
+17/04/15 01:04:03 INFO DAGScheduler: Missing parents for Stage 10: List(Stage 12)
+17/04/15 01:04:03 INFO DAGScheduler: Submitting Stage 12 (ZippedPartitionsRDD2[59] at zipPartitions at ReplicatedVertexView.scala:119), which is now runnable
+17/04/15 01:04:03 INFO DAGScheduler: Submitting 1 missing tasks from Stage 12 (ZippedPartitionsRDD2[59] at zipPartitions at ReplicatedVertexView.scala:119)
+17/04/15 01:04:03 INFO TaskSchedulerImpl: Adding task set 12.0 with 1 tasks
+17/04/15 01:04:03 INFO TaskSetManager: Starting task 12.0:0 as TID 7 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:03 INFO TaskSetManager: Serialized task 12.0:0 as 3363 bytes in 1 ms
+17/04/15 01:04:03 INFO Executor: Running task ID 7
+17/04/15 01:04:03 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:03 INFO CacheManager: Partition rdd_48_0 not found, computing it
+17/04/15 01:04:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:03 INFO MemoryStore: ensureFreeSpace(224) called with curMem=163085, maxMem=824495308
+17/04/15 01:04:03 INFO MemoryStore: Block rdd_48_0 stored as values to memory (estimated size 224.0 B, free 786.1 MB)
+17/04/15 01:04:03 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_48_0 in memory on 10.145.210.31:44263 (size: 224.0 B, free: 786.3 MB)
+17/04/15 01:04:03 INFO BlockManagerMaster: Updated info of block rdd_48_0
+17/04/15 01:04:03 INFO BlockManager: Found block rdd_35_0 locally
+17/04/15 01:04:03 INFO Executor: Serialized size of result for 7 is 964
+17/04/15 01:04:03 INFO Executor: Sending result for 7 directly to driver
+17/04/15 01:04:03 INFO Executor: Finished task ID 7
+17/04/15 01:04:03 INFO TaskSetManager: Finished TID 7 in 16 ms on localhost (progress: 0/1)
+17/04/15 01:04:03 INFO TaskSchedulerImpl: Remove TaskSet 12.0 from pool 
+17/04/15 01:04:03 INFO DAGScheduler: Completed ShuffleMapTask(12, 0)
+17/04/15 01:04:03 INFO DAGScheduler: Stage 12 (zipPartitions at ReplicatedVertexView.scala:119) finished in 0.017 s
+17/04/15 01:04:03 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:03 INFO DAGScheduler: running: Set()
+17/04/15 01:04:03 INFO DAGScheduler: waiting: Set(Stage 5, Stage 10)
+17/04/15 01:04:03 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:03 INFO DAGScheduler: Missing parents for Stage 5: List(Stage 10)
+17/04/15 01:04:03 INFO DAGScheduler: Missing parents for Stage 10: List()
+17/04/15 01:04:03 INFO DAGScheduler: Submitting Stage 10 (ZippedPartitionsRDD2[68] at zipPartitions at GraphImpl.scala:218), which is now runnable
+17/04/15 01:04:03 INFO DAGScheduler: Submitting 1 missing tasks from Stage 10 (ZippedPartitionsRDD2[68] at zipPartitions at GraphImpl.scala:218)
+17/04/15 01:04:03 INFO TaskSchedulerImpl: Adding task set 10.0 with 1 tasks
+17/04/15 01:04:03 INFO TaskSetManager: Starting task 10.0:0 as TID 8 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:03 INFO TaskSetManager: Serialized task 10.0:0 as 3455 bytes in 0 ms
+17/04/15 01:04:03 INFO Executor: Running task ID 8
+17/04/15 01:04:03 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:03 INFO CacheManager: Partition rdd_63_0 not found, computing it
+17/04/15 01:04:03 INFO BlockManager: Found block rdd_44_0 locally
+17/04/15 01:04:03 INFO MemoryStore: ensureFreeSpace(1824) called with curMem=163309, maxMem=824495308
+17/04/15 01:04:03 INFO MemoryStore: Block rdd_63_0 stored as values to memory (estimated size 1824.0 B, free 786.1 MB)
+17/04/15 01:04:03 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_63_0 in memory on 10.145.210.31:44263 (size: 1824.0 B, free: 786.3 MB)
+17/04/15 01:04:03 INFO BlockManagerMaster: Updated info of block rdd_63_0
+17/04/15 01:04:03 INFO CacheManager: Partition rdd_61_0 not found, computing it
+17/04/15 01:04:03 INFO CacheManager: Partition rdd_58_0 not found, computing it
+17/04/15 01:04:03 INFO BlockManager: Found block rdd_44_0 locally
+17/04/15 01:04:03 INFO MemoryStore: ensureFreeSpace(904) called with curMem=165133, maxMem=824495308
+17/04/15 01:04:03 INFO MemoryStore: Block rdd_58_0 stored as values to memory (estimated size 904.0 B, free 786.1 MB)
+17/04/15 01:04:03 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_58_0 in memory on 10.145.210.31:44263 (size: 904.0 B, free: 786.3 MB)
+17/04/15 01:04:03 INFO BlockManagerMaster: Updated info of block rdd_58_0
+17/04/15 01:04:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:03 INFO MemoryStore: ensureFreeSpace(1680) called with curMem=166037, maxMem=824495308
+17/04/15 01:04:03 INFO MemoryStore: Block rdd_61_0 stored as values to memory (estimated size 1680.0 B, free 786.1 MB)
+17/04/15 01:04:03 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_61_0 in memory on 10.145.210.31:44263 (size: 1680.0 B, free: 786.3 MB)
+17/04/15 01:04:03 INFO BlockManagerMaster: Updated info of block rdd_61_0
+17/04/15 01:04:03 INFO Executor: Serialized size of result for 8 is 964
+17/04/15 01:04:03 INFO Executor: Sending result for 8 directly to driver
+17/04/15 01:04:03 INFO Executor: Finished task ID 8
+17/04/15 01:04:03 INFO TaskSetManager: Finished TID 8 in 28 ms on localhost (progress: 0/1)
+17/04/15 01:04:03 INFO TaskSchedulerImpl: Remove TaskSet 10.0 from pool 
+17/04/15 01:04:03 INFO DAGScheduler: Completed ShuffleMapTask(10, 0)
+17/04/15 01:04:03 INFO DAGScheduler: Stage 10 (zipPartitions at GraphImpl.scala:218) finished in 0.017 s
+17/04/15 01:04:03 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:03 INFO DAGScheduler: running: Set()
+17/04/15 01:04:03 INFO DAGScheduler: waiting: Set(Stage 5)
+17/04/15 01:04:03 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:03 INFO DAGScheduler: Missing parents for Stage 5: List()
+17/04/15 01:04:03 INFO DAGScheduler: Submitting Stage 5 (MappedRDD[72] at map at VertexRDD.scala:91), which is now runnable
+17/04/15 01:04:03 INFO DAGScheduler: Submitting 1 missing tasks from Stage 5 (MappedRDD[72] at map at VertexRDD.scala:91)
+17/04/15 01:04:03 INFO TaskSchedulerImpl: Adding task set 5.0 with 1 tasks
+17/04/15 01:04:03 INFO TaskSetManager: Starting task 5.0:0 as TID 9 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:03 INFO TaskSetManager: Serialized task 5.0:0 as 3623 bytes in 0 ms
+17/04/15 01:04:03 INFO Executor: Running task ID 9
+17/04/15 01:04:03 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:03 INFO BlockManager: Found block rdd_35_0 locally
+17/04/15 01:04:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:03 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:03 INFO Executor: Serialized size of result for 9 is 933
+17/04/15 01:04:03 INFO Executor: Sending result for 9 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 9
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 9 in 9 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO DAGScheduler: Completed ResultTask(5, 0)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 5.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Stage 5 (reduce at VertexRDD.scala:91) finished in 0.008 s
+17/04/15 01:04:04 INFO SparkContext: Job finished: reduce at VertexRDD.scala:91, took 0.135126246 s
+17/04/15 01:04:04 INFO SparkContext: Starting job: count at LouvainCore.scala:106
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 3 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 2 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 5 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 7 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 6 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 4 is 136 bytes
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 79 (map at LouvainCore.scala:95)
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 76 (reduceByKey at LouvainCore.scala:91)
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 83 (map at LouvainCore.scala:97)
+17/04/15 01:04:04 INFO DAGScheduler: Got job 2 (count at LouvainCore.scala:106) with 1 output partitions (allowLocal=false)
+17/04/15 01:04:04 INFO DAGScheduler: Final stage: Stage 14 (count at LouvainCore.scala:106)
+17/04/15 01:04:04 INFO DAGScheduler: Parents of final stage: List(Stage 15, Stage 19, Stage 16, Stage 23)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents: List(Stage 23)
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 24 (MappedRDD[79] at map at LouvainCore.scala:95), which has no missing parents
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 24 (MappedRDD[79] at map at LouvainCore.scala:95)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 24.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 24.0:0 as TID 10 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 24.0:0 as 3717 bytes in 0 ms
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 25 (MapPartitionsRDD[76] at reduceByKey at LouvainCore.scala:91), which has no missing parents
+17/04/15 01:04:04 INFO Executor: Running task ID 10
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 25 (MapPartitionsRDD[76] at reduceByKey at LouvainCore.scala:91)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 25.0 with 1 tasks
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_73_0 not found, computing it
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_35_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_35_0 locally
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  1 ms
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(1656) called with curMem=167717, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_73_0 stored as values to memory (estimated size 1656.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_73_0 in memory on 10.145.210.31:44263 (size: 1656.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_73_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 10 is 964
+17/04/15 01:04:04 INFO Executor: Sending result for 10 directly to driver
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 25.0:0 as TID 11 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 25.0:0 as 3856 bytes in 0 ms
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 10 in 21 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 24.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(24, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 24 (map at LouvainCore.scala:95) finished in 0.021 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set(Stage 25)
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 14, Stage 23)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO Executor: Finished task ID 10
+17/04/15 01:04:04 INFO Executor: Running task ID 11
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 14: List(Stage 23)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 23: List(Stage 25)
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_73_0 locally
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 11 is 749
+17/04/15 01:04:04 INFO Executor: Sending result for 11 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 11
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 11 in 30 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 25.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(25, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 25 (reduceByKey at LouvainCore.scala:91) finished in 0.043 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set()
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 14, Stage 23)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 14: List(Stage 23)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 23: List()
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 23 (MappedRDD[83] at map at LouvainCore.scala:97), which is now runnable
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 23 (MappedRDD[83] at map at LouvainCore.scala:97)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 23.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 23.0:0 as TID 12 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 23.0:0 as 14068 bytes in 1 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 12
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_83_0 not found, computing it
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_78_0 not found, computing it
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  1 ms
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(472) called with curMem=169373, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_78_0 stored as values to memory (estimated size 472.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_78_0 in memory on 10.145.210.31:44263 (size: 472.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_78_0
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(904) called with curMem=169845, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_83_0 stored as values to memory (estimated size 904.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_83_0 in memory on 10.145.210.31:44263 (size: 904.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_83_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 12 is 964
+17/04/15 01:04:04 INFO Executor: Sending result for 12 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 12
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 12 in 28 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 23.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(23, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 23 (map at LouvainCore.scala:97) finished in 0.030 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set()
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 14)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 14: List()
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 14 (MappedRDD[87] at map at LouvainCore.scala:101), which is now runnable
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 14 (MappedRDD[87] at map at LouvainCore.scala:101)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 14.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 14.0:0 as TID 13 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 14.0:0 as 13531 bytes in 1 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 13
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_87_0 not found, computing it
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_73_0 locally
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(976) called with curMem=170749, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_87_0 stored as values to memory (estimated size 976.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_87_0 in memory on 10.145.210.31:44263 (size: 976.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_87_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 13 is 855
+17/04/15 01:04:04 INFO Executor: Sending result for 13 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 13
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 13 in 16 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 14.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ResultTask(14, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 14 (count at LouvainCore.scala:106) finished in 0.017 s
+17/04/15 01:04:04 INFO SparkContext: Job finished: count at LouvainCore.scala:106, took 0.129782098 s
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 73 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 73
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_73_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_73_0 of size 1656 dropped from memory (free 824325239)
+17/04/15 01:04:04 INFO MapPartitionsRDD: Removing RDD 78 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 78
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_78_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_78_0 of size 472 dropped from memory (free 824325711)
+17/04/15 01:04:04 INFO MappedRDD: Removing RDD 83 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 83
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_83_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_83_0 of size 904 dropped from memory (free 824326615)
+17/04/15 01:04:04 INFO SparkContext: Starting job: reduce at VertexRDD.scala:91
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 3 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 2 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 5 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 7 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 6 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 4 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 8 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 10 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 9 is 136 bytes
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 87 (map at LouvainCore.scala:101)
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 93 (zipPartitions at ReplicatedVertexView.scala:119)
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 97 (zipPartitions at GraphImpl.scala:218)
+17/04/15 01:04:04 INFO DAGScheduler: Got job 3 (reduce at VertexRDD.scala:91) with 1 output partitions (allowLocal=false)
+17/04/15 01:04:04 INFO DAGScheduler: Final stage: Stage 26 (reduce at VertexRDD.scala:91)
+17/04/15 01:04:04 INFO DAGScheduler: Parents of final stage: List(Stage 27, Stage 31, Stage 39, Stage 28)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents: List(Stage 31, Stage 39)
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 31 (MappedRDD[87] at map at LouvainCore.scala:101), which has no missing parents
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 31 (MappedRDD[87] at map at LouvainCore.scala:101)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 31.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 31.0:0 as TID 14 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 31.0:0 as 13502 bytes in 1 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 14
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_87_0 locally
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 14 is 749
+17/04/15 01:04:04 INFO Executor: Sending result for 14 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 14
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 14 in 10 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 31.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(31, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 31 (map at LouvainCore.scala:101) finished in 0.008 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set()
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 39, Stage 40, Stage 26)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 39: List(Stage 40)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 40: List()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 26: List(Stage 39)
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 40 (ZippedPartitionsRDD2[93] at zipPartitions at ReplicatedVertexView.scala:119), which is now runnable
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 40 (ZippedPartitionsRDD2[93] at zipPartitions at ReplicatedVertexView.scala:119)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 40.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 40.0:0 as TID 15 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 40.0:0 as 4270 bytes in 0 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 15
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_48_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_35_0 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_89_0 not found, computing it
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_35_0 locally
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(1608) called with curMem=168693, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_89_0 stored as values to memory (estimated size 1608.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_89_0 in memory on 10.145.210.31:44263 (size: 1608.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_89_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 15 is 964
+17/04/15 01:04:04 INFO Executor: Sending result for 15 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 15
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 15 in 14 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 40.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(40, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 40 (zipPartitions at ReplicatedVertexView.scala:119) finished in 0.010 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set()
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 39, Stage 26)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 39: List()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 26: List(Stage 39)
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 39 (ZippedPartitionsRDD2[97] at zipPartitions at GraphImpl.scala:218), which is now runnable
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 39 (ZippedPartitionsRDD2[97] at zipPartitions at GraphImpl.scala:218)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 39.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 39.0:0 as TID 16 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 39.0:0 as 4255 bytes in 0 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 16
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_63_0 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_95_0 not found, computing it
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_61_0 locally
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(1728) called with curMem=170301, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_95_0 stored as values to memory (estimated size 1728.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_95_0 in memory on 10.145.210.31:44263 (size: 1728.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_95_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 16 is 964
+17/04/15 01:04:04 INFO Executor: Sending result for 16 directly to driver
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 16 in 14 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 39.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(39, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 39 (zipPartitions at GraphImpl.scala:218) finished in 0.010 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set()
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 26)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 26: List()
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 26 (MappedRDD[101] at map at VertexRDD.scala:91), which is now runnable
+17/04/15 01:04:04 INFO Executor: Finished task ID 16
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 26 (MappedRDD[101] at map at VertexRDD.scala:91)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 26.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 26.0:0 as TID 17 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 26.0:0 as 4424 bytes in 1 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 17
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_99_0 not found, computing it
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_89_0 locally
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(2808) called with curMem=172029, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_99_0 stored as values to memory (estimated size 2.7 KB, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_99_0 in memory on 10.145.210.31:44263 (size: 2.7 KB, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_99_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 17 is 933
+17/04/15 01:04:04 INFO Executor: Sending result for 17 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 17
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 17 in 10 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO DAGScheduler: Completed ResultTask(26, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 26 (reduce at VertexRDD.scala:91) finished in 0.009 s
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 26.0 from pool 
+17/04/15 01:04:04 INFO SparkContext: Job finished: reduce at VertexRDD.scala:91, took 0.085374401 s
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 70 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 70
+17/04/15 01:04:04 INFO MappedRDD: Removing RDD 87 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 87
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 35 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_87_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_87_0 of size 976 dropped from memory (free 824321447)
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 35
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_35_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_35_0 of size 1608 dropped from memory (free 824323055)
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 61 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 61
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_61_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_61_0 of size 1680 dropped from memory (free 824324735)
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 104 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 104
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 107 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 107
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 110 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 110
+17/04/15 01:04:04 INFO SparkContext: Starting job: reduce at VertexRDD.scala:91
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 3 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 2 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 5 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 7 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 6 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 4 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 8 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 10 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 9 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 11 is 136 bytes
+17/04/15 01:04:04 INFO DAGScheduler: Got job 4 (reduce at VertexRDD.scala:91) with 1 output partitions (allowLocal=false)
+17/04/15 01:04:04 INFO DAGScheduler: Final stage: Stage 41 (reduce at VertexRDD.scala:91)
+17/04/15 01:04:04 INFO DAGScheduler: Parents of final stage: List(Stage 46, Stage 42, Stage 43)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents: List()
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 41 (MappedRDD[113] at map at VertexRDD.scala:91), which has no missing parents
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 41 (MappedRDD[113] at map at VertexRDD.scala:91)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 41.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 41.0:0 as TID 18 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 41.0:0 as 4281 bytes in 0 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 18
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_89_0 locally
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 18 is 641
+17/04/15 01:04:04 INFO Executor: Sending result for 18 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 18
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 18 in 8 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 41.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ResultTask(41, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 41 (reduce at VertexRDD.scala:91) finished in 0.008 s
+17/04/15 01:04:04 INFO SparkContext: Job finished: reduce at VertexRDD.scala:91, took 0.022125588 s
+17/04/15 01:04:04 INFO SparkContext: Starting job: count at LouvainCore.scala:106
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 13 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 12 is 136 bytes
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 120 (map at LouvainCore.scala:95)
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 117 (reduceByKey at LouvainCore.scala:91)
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 124 (map at LouvainCore.scala:97)
+17/04/15 01:04:04 INFO DAGScheduler: Got job 5 (count at LouvainCore.scala:106) with 1 output partitions (allowLocal=false)
+17/04/15 01:04:04 INFO DAGScheduler: Final stage: Stage 54 (count at LouvainCore.scala:106)
+17/04/15 01:04:04 INFO DAGScheduler: Parents of final stage: List(Stage 67, Stage 56, Stage 69, Stage 55, Stage 59)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents: List(Stage 69)
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 70 (MappedRDD[120] at map at LouvainCore.scala:95), which has no missing parents
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 70 (MappedRDD[120] at map at LouvainCore.scala:95)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 70.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 70.0:0 as TID 19 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 70.0:0 as 4425 bytes in 0 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 19
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 71 (MapPartitionsRDD[117] at reduceByKey at LouvainCore.scala:91), which has no missing parents
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_114_0 not found, computing it
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_89_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_99_0 locally
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(1656) called with curMem=170573, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_114_0 stored as values to memory (estimated size 1656.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_114_0 in memory on 10.145.210.31:44263 (size: 1656.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_114_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 19 is 749
+17/04/15 01:04:04 INFO Executor: Sending result for 19 directly to driver
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 19 in 13 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 70.0 from pool 
+17/04/15 01:04:04 INFO Executor: Finished task ID 19
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 71 (MapPartitionsRDD[117] at reduceByKey at LouvainCore.scala:91)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 71.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 71.0:0 as TID 20 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 71.0:0 as 4446 bytes in 0 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 20
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(70, 0)
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO DAGScheduler: Stage 70 (map at LouvainCore.scala:95) finished in 0.019 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set(Stage 71)
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 54, Stage 69)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_114_0 locally
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 20 is 749
+17/04/15 01:04:04 INFO Executor: Sending result for 20 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 20
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 20 in 9 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 71.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 54: List(Stage 69)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 69: List(Stage 71)
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(71, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 71 (reduceByKey at LouvainCore.scala:91) finished in 0.009 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set()
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 54, Stage 69)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 54: List(Stage 69)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 69: List()
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 69 (MappedRDD[124] at map at LouvainCore.scala:97), which is now runnable
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 69 (MappedRDD[124] at map at LouvainCore.scala:97)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 69.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 69.0:0 as TID 21 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 69.0:0 as 17640 bytes in 1 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 21
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_124_0 not found, computing it
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_119_0 not found, computing it
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  1 ms
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(256) called with curMem=172229, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_119_0 stored as values to memory (estimated size 256.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_119_0 in memory on 10.145.210.31:44263 (size: 256.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_119_0
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(904) called with curMem=172485, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_124_0 stored as values to memory (estimated size 904.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_124_0 in memory on 10.145.210.31:44263 (size: 904.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_124_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 21 is 964
+17/04/15 01:04:04 INFO Executor: Sending result for 21 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 21
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 21 in 18 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 69.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(69, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 69 (map at LouvainCore.scala:97) finished in 0.016 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set()
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 54)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 54: List()
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 54 (MappedRDD[128] at map at LouvainCore.scala:101), which is now runnable
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 54 (MappedRDD[128] at map at LouvainCore.scala:101)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 54.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 54.0:0 as TID 22 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 54.0:0 as 17711 bytes in 1 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 22
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_128_0 not found, computing it
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_114_0 locally
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(976) called with curMem=173389, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_128_0 stored as values to memory (estimated size 976.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_128_0 in memory on 10.145.210.31:44263 (size: 976.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_128_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 22 is 855
+17/04/15 01:04:04 INFO Executor: Sending result for 22 directly to driver
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 22 in 15 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 54.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ResultTask(54, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 54 (count at LouvainCore.scala:106) finished in 0.013 s
+17/04/15 01:04:04 INFO SparkContext: Job finished: count at LouvainCore.scala:106, took 0.085792551 s
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 114 from persistence list
+17/04/15 01:04:04 INFO Executor: Finished task ID 22
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 114
+17/04/15 01:04:04 INFO MapPartitionsRDD: Removing RDD 119 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_114_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_114_0 of size 1656 dropped from memory (free 824322599)
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 119
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_119_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_119_0 of size 256 dropped from memory (free 824322855)
+17/04/15 01:04:04 INFO MappedRDD: Removing RDD 124 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 124
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_124_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_124_0 of size 904 dropped from memory (free 824323759)
+17/04/15 01:04:04 INFO SparkContext: Starting job: reduce at VertexRDD.scala:91
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 3 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 2 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 5 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 7 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 6 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 4 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 8 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 10 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 9 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 11 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 13 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 12 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 14 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 16 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 15 is 136 bytes
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 128 (map at LouvainCore.scala:101)
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 134 (zipPartitions at ReplicatedVertexView.scala:119)
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 138 (zipPartitions at GraphImpl.scala:218)
+17/04/15 01:04:04 INFO DAGScheduler: Got job 6 (reduce at VertexRDD.scala:91) with 1 output partitions (allowLocal=false)
+17/04/15 01:04:04 INFO DAGScheduler: Final stage: Stage 72 (reduce at VertexRDD.scala:91)
+17/04/15 01:04:04 INFO DAGScheduler: Parents of final stage: List(Stage 85, Stage 74, Stage 73, Stage 91, Stage 77)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents: List(Stage 85, Stage 91)
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 85 (MappedRDD[128] at map at LouvainCore.scala:101), which has no missing parents
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 85 (MappedRDD[128] at map at LouvainCore.scala:101)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 85.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 85.0:0 as TID 23 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 85.0:0 as 17687 bytes in 1 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 23
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_128_0 locally
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 23 is 749
+17/04/15 01:04:04 INFO Executor: Sending result for 23 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 23
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 23 in 12 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 85.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(85, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 85 (map at LouvainCore.scala:101) finished in 0.010 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set()
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 72, Stage 91, Stage 92)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 72: List(Stage 91)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 91: List(Stage 92)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 92: List()
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 92 (ZippedPartitionsRDD2[134] at zipPartitions at ReplicatedVertexView.scala:119), which is now runnable
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 92 (ZippedPartitionsRDD2[134] at zipPartitions at ReplicatedVertexView.scala:119)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 92.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 92.0:0 as TID 24 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 92.0:0 as 4698 bytes in 0 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 24
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_48_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_89_0 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_130_0 not found, computing it
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_89_0 locally
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(1608) called with curMem=171549, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_130_0 stored as values to memory (estimated size 1608.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_130_0 in memory on 10.145.210.31:44263 (size: 1608.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_130_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 24 is 964
+17/04/15 01:04:04 INFO Executor: Sending result for 24 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 24
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 24 in 10 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 92.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(92, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 92 (zipPartitions at ReplicatedVertexView.scala:119) finished in 0.009 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set()
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 72, Stage 91)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 72: List(Stage 91)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 91: List()
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 91 (ZippedPartitionsRDD2[138] at zipPartitions at GraphImpl.scala:218), which is now runnable
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 91 (ZippedPartitionsRDD2[138] at zipPartitions at GraphImpl.scala:218)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 91.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 91.0:0 as TID 25 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 91.0:0 as 4656 bytes in 0 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 25
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_63_0 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_136_0 not found, computing it
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_95_0 locally
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(1728) called with curMem=173157, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_136_0 stored as values to memory (estimated size 1728.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_136_0 in memory on 10.145.210.31:44263 (size: 1728.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_136_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 25 is 964
+17/04/15 01:04:04 INFO Executor: Sending result for 25 directly to driver
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 25 in 12 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 91.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(91, 0)
+17/04/15 01:04:04 INFO Executor: Finished task ID 25
+17/04/15 01:04:04 INFO DAGScheduler: Stage 91 (zipPartitions at GraphImpl.scala:218) finished in 0.013 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set()
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 72)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 72: List()
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 72 (MappedRDD[142] at map at VertexRDD.scala:91), which is now runnable
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 72 (MappedRDD[142] at map at VertexRDD.scala:91)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 72.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 72.0:0 as TID 26 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 72.0:0 as 4831 bytes in 1 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 26
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_140_0 not found, computing it
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_130_0 locally
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(1968) called with curMem=174885, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_140_0 stored as values to memory (estimated size 1968.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_140_0 in memory on 10.145.210.31:44263 (size: 1968.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_140_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 26 is 933
+17/04/15 01:04:04 INFO Executor: Sending result for 26 directly to driver
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 26 in 10 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 72.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ResultTask(72, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 72 (reduce at VertexRDD.scala:91) finished in 0.011 s
+17/04/15 01:04:04 INFO SparkContext: Job finished: reduce at VertexRDD.scala:91, took 0.091884728 s
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 99 from persistence list
+17/04/15 01:04:04 INFO Executor: Finished task ID 26
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 99
+17/04/15 01:04:04 INFO MappedRDD: Removing RDD 128 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_99_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_99_0 of size 2808 dropped from memory (free 824321263)
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 128
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 89 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_128_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_128_0 of size 976 dropped from memory (free 824322239)
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 89
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_89_0
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 95 from persistence list
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_89_0 of size 1608 dropped from memory (free 824323847)
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 95
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_95_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_95_0 of size 1728 dropped from memory (free 824325575)
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 145 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 145
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 148 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 148
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 151 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 151
+17/04/15 01:04:04 INFO SparkContext: Starting job: reduce at VertexRDD.scala:91
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 3 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 2 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 5 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 7 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 6 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 4 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 8 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 10 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 9 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 11 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 13 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 12 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 14 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 16 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 15 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 17 is 136 bytes
+17/04/15 01:04:04 INFO DAGScheduler: Got job 7 (reduce at VertexRDD.scala:91) with 1 output partitions (allowLocal=false)
+17/04/15 01:04:04 INFO DAGScheduler: Final stage: Stage 93 (reduce at VertexRDD.scala:91)
+17/04/15 01:04:04 INFO DAGScheduler: Parents of final stage: List(Stage 94, Stage 106, Stage 98, Stage 95)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents: List()
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 93 (MappedRDD[154] at map at VertexRDD.scala:91), which has no missing parents
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 93 (MappedRDD[154] at map at VertexRDD.scala:91)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 93.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 93.0:0 as TID 27 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 93.0:0 as 4707 bytes in 0 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 27
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_130_0 locally
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 27 is 641
+17/04/15 01:04:04 INFO Executor: Sending result for 27 directly to driver
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 27 in 7 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 93.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ResultTask(93, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 93 (reduce at VertexRDD.scala:91) finished in 0.006 s
+17/04/15 01:04:04 INFO Executor: Finished task ID 27
+17/04/15 01:04:04 INFO SparkContext: Job finished: reduce at VertexRDD.scala:91, took 0.018865474 s
+17/04/15 01:04:04 INFO SparkContext: Starting job: count at LouvainCore.scala:106
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 19 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 18 is 136 bytes
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 161 (map at LouvainCore.scala:95)
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 158 (reduceByKey at LouvainCore.scala:91)
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 165 (map at LouvainCore.scala:97)
+17/04/15 01:04:04 INFO DAGScheduler: Got job 8 (count at LouvainCore.scala:106) with 1 output partitions (allowLocal=false)
+17/04/15 01:04:04 INFO DAGScheduler: Final stage: Stage 112 (count at LouvainCore.scala:106)
+17/04/15 01:04:04 INFO DAGScheduler: Parents of final stage: List(Stage 117, Stage 114, Stage 133, Stage 125, Stage 113, Stage 131)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents: List(Stage 133)
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 134 (MappedRDD[161] at map at LouvainCore.scala:95), which has no missing parents
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 134 (MappedRDD[161] at map at LouvainCore.scala:95)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 134.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 134.0:0 as TID 28 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 134.0:0 as 4822 bytes in 0 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 28
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 135 (MapPartitionsRDD[158] at reduceByKey at LouvainCore.scala:91), which has no missing parents
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_155_0 not found, computing it
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_130_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_140_0 locally
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 135 (MapPartitionsRDD[158] at reduceByKey at LouvainCore.scala:91)
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(1656) called with curMem=169733, maxMem=824495308
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 135.0 with 1 tasks
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_155_0 stored as values to memory (estimated size 1656.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_155_0 in memory on 10.145.210.31:44263 (size: 1656.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_155_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 28 is 749
+17/04/15 01:04:04 INFO Executor: Sending result for 28 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 28
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 28 in 12 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 134.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(134, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 134 (map at LouvainCore.scala:95) finished in 0.012 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 135.0:0 as TID 29 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO DAGScheduler: running: Set(Stage 135)
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 133, Stage 112)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 133: List(Stage 135)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 135.0:0 as 4838 bytes in 0 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 29
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 112: List(Stage 133)
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_155_0 locally
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 29 is 749
+17/04/15 01:04:04 INFO Executor: Sending result for 29 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 29
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 29 in 10 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 135.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(135, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 135 (reduceByKey at LouvainCore.scala:91) finished in 0.015 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set()
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 133, Stage 112)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 133: List()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 112: List(Stage 133)
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 133 (MappedRDD[165] at map at LouvainCore.scala:97), which is now runnable
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 133 (MappedRDD[165] at map at LouvainCore.scala:97)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 133.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 133.0:0 as TID 30 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 133.0:0 as 20004 bytes in 1 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 30
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_165_0 not found, computing it
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  1 ms
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_160_0 not found, computing it
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(256) called with curMem=171389, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_160_0 stored as values to memory (estimated size 256.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_160_0 in memory on 10.145.210.31:44263 (size: 256.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_160_0
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(904) called with curMem=171645, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_165_0 stored as values to memory (estimated size 904.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_165_0 in memory on 10.145.210.31:44263 (size: 904.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_165_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 30 is 964
+17/04/15 01:04:04 INFO Executor: Sending result for 30 directly to driver
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 30 in 15 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO Executor: Finished task ID 30
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 133.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(133, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 133 (map at LouvainCore.scala:97) finished in 0.016 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set()
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 112)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 112: List()
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 112 (MappedRDD[169] at map at LouvainCore.scala:101), which is now runnable
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 112 (MappedRDD[169] at map at LouvainCore.scala:101)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 112.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 112.0:0 as TID 31 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 112.0:0 as 20122 bytes in 2 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 31
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_169_0 not found, computing it
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_155_0 locally
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(976) called with curMem=172549, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_169_0 stored as values to memory (estimated size 976.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_169_0 in memory on 10.145.210.31:44263 (size: 976.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_169_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 31 is 855
+17/04/15 01:04:04 INFO Executor: Sending result for 31 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 31
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 31 in 16 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO DAGScheduler: Completed ResultTask(112, 0)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 112.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Stage 112 (count at LouvainCore.scala:106) finished in 0.016 s
+17/04/15 01:04:04 INFO SparkContext: Job finished: count at LouvainCore.scala:106, took 0.127687905 s
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 155 from persistence list
+17/04/15 01:04:04 INFO MapPartitionsRDD: Removing RDD 160 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 155
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_155_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_155_0 of size 1656 dropped from memory (free 824323439)
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 160
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_160_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_160_0 of size 256 dropped from memory (free 824323695)
+17/04/15 01:04:04 INFO MappedRDD: Removing RDD 165 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 165
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_165_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_165_0 of size 904 dropped from memory (free 824324599)
+17/04/15 01:04:04 INFO SparkContext: Starting job: reduce at VertexRDD.scala:91
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 3 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 2 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 5 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 7 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 6 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 4 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 8 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 10 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 9 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 11 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 13 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 12 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 14 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 16 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 15 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 17 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 19 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 18 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 20 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 22 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 21 is 136 bytes
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 169 (map at LouvainCore.scala:101)
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 175 (zipPartitions at ReplicatedVertexView.scala:119)
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 179 (zipPartitions at GraphImpl.scala:218)
+17/04/15 01:04:04 INFO DAGScheduler: Got job 9 (reduce at VertexRDD.scala:91) with 1 output partitions (allowLocal=false)
+17/04/15 01:04:04 INFO DAGScheduler: Final stage: Stage 136 (reduce at VertexRDD.scala:91)
+17/04/15 01:04:04 INFO DAGScheduler: Parents of final stage: List(Stage 161, Stage 137, Stage 155, Stage 141, Stage 138, Stage 149)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents: List(Stage 161, Stage 155)
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 155 (MappedRDD[169] at map at LouvainCore.scala:101), which has no missing parents
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 155 (MappedRDD[169] at map at LouvainCore.scala:101)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 155.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 155.0:0 as TID 32 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 155.0:0 as 20097 bytes in 1 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 32
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_169_0 locally
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 32 is 749
+17/04/15 01:04:04 INFO Executor: Sending result for 32 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 32
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 32 in 10 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 155.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(155, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 155 (map at LouvainCore.scala:101) finished in 0.009 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set()
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 161, Stage 136, Stage 162)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 161: List(Stage 162)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 136: List(Stage 161)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 162: List()
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 162 (ZippedPartitionsRDD2[175] at zipPartitions at ReplicatedVertexView.scala:119), which is now runnable
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 162 (ZippedPartitionsRDD2[175] at zipPartitions at ReplicatedVertexView.scala:119)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 162.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 162.0:0 as TID 33 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 162.0:0 as 5073 bytes in 0 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 33
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_48_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_130_0 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_171_0 not found, computing it
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_130_0 locally
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(1608) called with curMem=170709, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_171_0 stored as values to memory (estimated size 1608.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_171_0 in memory on 10.145.210.31:44263 (size: 1608.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_171_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 33 is 964
+17/04/15 01:04:04 INFO Executor: Sending result for 33 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 33
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 33 in 11 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 162.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(162, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 162 (zipPartitions at ReplicatedVertexView.scala:119) finished in 0.012 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set()
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 161, Stage 136)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 161: List()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 136: List(Stage 161)
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 161 (ZippedPartitionsRDD2[179] at zipPartitions at GraphImpl.scala:218), which is now runnable
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 161 (ZippedPartitionsRDD2[179] at zipPartitions at GraphImpl.scala:218)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 161.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 161.0:0 as TID 34 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 161.0:0 as 5015 bytes in 0 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 34
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_63_0 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_177_0 not found, computing it
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_136_0 locally
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(1728) called with curMem=172317, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_177_0 stored as values to memory (estimated size 1728.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_177_0 in memory on 10.145.210.31:44263 (size: 1728.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_177_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 34 is 964
+17/04/15 01:04:04 INFO Executor: Sending result for 34 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 34
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 34 in 10 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 161.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(161, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 161 (zipPartitions at GraphImpl.scala:218) finished in 0.011 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set()
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 136)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 136: List()
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 136 (MappedRDD[183] at map at VertexRDD.scala:91), which is now runnable
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 136 (MappedRDD[183] at map at VertexRDD.scala:91)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 136.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 136.0:0 as TID 35 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 136.0:0 as 5209 bytes in 0 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 35
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_181_0 not found, computing it
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_171_0 locally
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(1968) called with curMem=174045, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_181_0 stored as values to memory (estimated size 1968.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_181_0 in memory on 10.145.210.31:44263 (size: 1968.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_181_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 35 is 933
+17/04/15 01:04:04 INFO Executor: Sending result for 35 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 35
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 35 in 8 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO DAGScheduler: Completed ResultTask(136, 0)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 136.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Stage 136 (reduce at VertexRDD.scala:91) finished in 0.009 s
+17/04/15 01:04:04 INFO SparkContext: Job finished: reduce at VertexRDD.scala:91, took 0.070514966 s
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 140 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 140
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_140_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_140_0 of size 1968 dropped from memory (free 824321263)
+17/04/15 01:04:04 INFO MappedRDD: Removing RDD 169 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 169
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_169_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_169_0 of size 976 dropped from memory (free 824322239)
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 130 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 130
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_130_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_130_0 of size 1608 dropped from memory (free 824323847)
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 136 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 136
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_136_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_136_0 of size 1728 dropped from memory (free 824325575)
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 186 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 186
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 189 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 189
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 192 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 192
+17/04/15 01:04:04 INFO SparkContext: Starting job: reduce at VertexRDD.scala:91
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 3 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 2 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 5 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 7 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 6 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 4 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 8 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 10 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 9 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 11 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 13 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 12 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 14 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 16 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 15 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 17 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 19 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 18 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 20 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 22 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 21 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 23 is 136 bytes
+17/04/15 01:04:04 INFO DAGScheduler: Got job 10 (reduce at VertexRDD.scala:91) with 1 output partitions (allowLocal=false)
+17/04/15 01:04:04 INFO DAGScheduler: Final stage: Stage 163 (reduce at VertexRDD.scala:91)
+17/04/15 01:04:04 INFO DAGScheduler: Parents of final stage: List(Stage 182, Stage 168, Stage 165, Stage 176, Stage 164)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents: List()
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 163 (MappedRDD[195] at map at VertexRDD.scala:91), which has no missing parents
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 163 (MappedRDD[195] at map at VertexRDD.scala:91)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 163.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 163.0:0 as TID 36 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 163.0:0 as 5092 bytes in 0 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 36
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_171_0 locally
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 36 is 641
+17/04/15 01:04:04 INFO Executor: Sending result for 36 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 36
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 36 in 6 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 163.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ResultTask(163, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 163 (reduce at VertexRDD.scala:91) finished in 0.006 s
+17/04/15 01:04:04 INFO SparkContext: Job finished: reduce at VertexRDD.scala:91, took 0.020826939 s
+17/04/15 01:04:04 INFO SparkContext: Starting job: count at LouvainCore.scala:106
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 25 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 24 is 136 bytes
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 202 (map at LouvainCore.scala:95)
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 199 (reduceByKey at LouvainCore.scala:91)
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 206 (map at LouvainCore.scala:97)
+17/04/15 01:04:04 INFO DAGScheduler: Got job 11 (count at LouvainCore.scala:106) with 1 output partitions (allowLocal=false)
+17/04/15 01:04:04 INFO DAGScheduler: Final stage: Stage 188 (count at LouvainCore.scala:106)
+17/04/15 01:04:04 INFO DAGScheduler: Parents of final stage: List(Stage 215, Stage 201, Stage 190, Stage 213, Stage 189, Stage 207, Stage 193)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents: List(Stage 215)
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 216 (MappedRDD[202] at map at LouvainCore.scala:95), which has no missing parents
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 216 (MappedRDD[202] at map at LouvainCore.scala:95)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 216.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 216.0:0 as TID 37 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 216.0:0 as 5202 bytes in 0 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 37
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 217 (MapPartitionsRDD[199] at reduceByKey at LouvainCore.scala:91), which has no missing parents
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_196_0 not found, computing it
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_171_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_181_0 locally
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(1656) called with curMem=169733, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_196_0 stored as values to memory (estimated size 1656.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_196_0 in memory on 10.145.210.31:44263 (size: 1656.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_196_0
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 217 (MapPartitionsRDD[199] at reduceByKey at LouvainCore.scala:91)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 217.0 with 1 tasks
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 37 is 749
+17/04/15 01:04:04 INFO Executor: Sending result for 37 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 37
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 217.0:0 as TID 38 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 217.0:0 as 5211 bytes in 0 ms
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 37 in 9 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 216.0 from pool 
+17/04/15 01:04:04 INFO Executor: Running task ID 38
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(216, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 216 (map at LouvainCore.scala:95) finished in 0.010 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set(Stage 217)
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 215, Stage 188)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 215: List(Stage 217)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 188: List(Stage 215)
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_196_0 locally
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 38 is 749
+17/04/15 01:04:04 INFO Executor: Sending result for 38 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 38
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 38 in 9 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 217.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(217, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 217 (reduceByKey at LouvainCore.scala:91) finished in 0.008 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set()
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 215, Stage 188)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 215: List()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 188: List(Stage 215)
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 215 (MappedRDD[206] at map at LouvainCore.scala:97), which is now runnable
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 215 (MappedRDD[206] at map at LouvainCore.scala:97)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 215.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 215.0:0 as TID 39 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 215.0:0 as 22361 bytes in 1 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 39
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_206_0 not found, computing it
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  1 ms
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_201_0 not found, computing it
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(256) called with curMem=171389, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_201_0 stored as values to memory (estimated size 256.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_201_0 in memory on 10.145.210.31:44263 (size: 256.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_201_0
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(904) called with curMem=171645, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_206_0 stored as values to memory (estimated size 904.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_206_0 in memory on 10.145.210.31:44263 (size: 904.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_206_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 39 is 964
+17/04/15 01:04:04 INFO Executor: Sending result for 39 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 39
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 39 in 15 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 215.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(215, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 215 (map at LouvainCore.scala:97) finished in 0.015 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set()
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 188)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 188: List()
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 188 (MappedRDD[210] at map at LouvainCore.scala:101), which is now runnable
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 188 (MappedRDD[210] at map at LouvainCore.scala:101)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 188.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 188.0:0 as TID 40 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 188.0:0 as 22543 bytes in 0 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 40
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_210_0 not found, computing it
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_196_0 locally
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(976) called with curMem=172549, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_210_0 stored as values to memory (estimated size 976.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_210_0 in memory on 10.145.210.31:44263 (size: 976.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_210_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 40 is 855
+17/04/15 01:04:04 INFO Executor: Sending result for 40 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 40
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 40 in 13 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 188.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ResultTask(188, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 188 (count at LouvainCore.scala:106) finished in 0.013 s
+17/04/15 01:04:04 INFO SparkContext: Job finished: count at LouvainCore.scala:106, took 0.069564901 s
+17/04/15 01:04:04 INFO ZippedPartitionsRDD2: Removing RDD 196 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 196
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_196_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_196_0 of size 1656 dropped from memory (free 824323439)
+17/04/15 01:04:04 INFO MapPartitionsRDD: Removing RDD 201 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 201
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_201_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_201_0 of size 256 dropped from memory (free 824323695)
+17/04/15 01:04:04 INFO MappedRDD: Removing RDD 206 from persistence list
+17/04/15 01:04:04 INFO BlockManager: Removing RDD 206
+17/04/15 01:04:04 INFO BlockManager: Removing block rdd_206_0
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_206_0 of size 904 dropped from memory (free 824324599)
+17/04/15 01:04:04 INFO SparkContext: Starting job: reduce at VertexRDD.scala:91
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 3 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 2 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 5 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 7 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 6 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 4 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 8 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 10 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 9 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 11 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 13 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 12 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 14 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 16 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 15 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 17 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 19 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 18 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 20 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 22 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 21 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 23 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 25 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 24 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 26 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 28 is 136 bytes
+17/04/15 01:04:04 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 27 is 136 bytes
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 210 (map at LouvainCore.scala:101)
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 216 (zipPartitions at ReplicatedVertexView.scala:119)
+17/04/15 01:04:04 INFO DAGScheduler: Registering RDD 220 (zipPartitions at GraphImpl.scala:218)
+17/04/15 01:04:04 INFO DAGScheduler: Got job 12 (reduce at VertexRDD.scala:91) with 1 output partitions (allowLocal=false)
+17/04/15 01:04:04 INFO DAGScheduler: Final stage: Stage 218 (reduce at VertexRDD.scala:91)
+17/04/15 01:04:04 INFO DAGScheduler: Parents of final stage: List(Stage 219, Stage 237, Stage 249, Stage 223, Stage 220, Stage 231, Stage 243)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents: List(Stage 249, Stage 243)
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 243 (MappedRDD[210] at map at LouvainCore.scala:101), which has no missing parents
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 243 (MappedRDD[210] at map at LouvainCore.scala:101)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 243.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 243.0:0 as TID 41 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 243.0:0 as 22505 bytes in 1 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 41
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_210_0 locally
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 41 is 749
+17/04/15 01:04:04 INFO Executor: Sending result for 41 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 41
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 41 in 11 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 243.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(243, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 243 (map at LouvainCore.scala:101) finished in 0.012 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set()
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 249, Stage 250, Stage 218)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 249: List(Stage 250)
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 250: List()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 218: List(Stage 249)
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 250 (ZippedPartitionsRDD2[216] at zipPartitions at ReplicatedVertexView.scala:119), which is now runnable
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 250 (ZippedPartitionsRDD2[216] at zipPartitions at ReplicatedVertexView.scala:119)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 250.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 250.0:0 as TID 42 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 250.0:0 as 5460 bytes in 0 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 42
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_48_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_171_0 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_212_0 not found, computing it
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_171_0 locally
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(1608) called with curMem=170709, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_212_0 stored as values to memory (estimated size 1608.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_212_0 in memory on 10.145.210.31:44263 (size: 1608.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_212_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 42 is 964
+17/04/15 01:04:04 INFO Executor: Sending result for 42 directly to driver
+17/04/15 01:04:04 INFO Executor: Finished task ID 42
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 42 in 10 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 250.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(250, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 250 (zipPartitions at ReplicatedVertexView.scala:119) finished in 0.011 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set()
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 249, Stage 218)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 249: List()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 218: List(Stage 249)
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 249 (ZippedPartitionsRDD2[220] at zipPartitions at GraphImpl.scala:218), which is now runnable
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 249 (ZippedPartitionsRDD2[220] at zipPartitions at GraphImpl.scala:218)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 249.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 249.0:0 as TID 43 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 249.0:0 as 5385 bytes in 0 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 43
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_63_0 locally
+17/04/15 01:04:04 INFO CacheManager: Partition rdd_218_0 not found, computing it
+17/04/15 01:04:04 INFO BlockManager: Found block rdd_177_0 locally
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:04 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:04 INFO MemoryStore: ensureFreeSpace(1728) called with curMem=172317, maxMem=824495308
+17/04/15 01:04:04 INFO MemoryStore: Block rdd_218_0 stored as values to memory (estimated size 1728.0 B, free 786.1 MB)
+17/04/15 01:04:04 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_218_0 in memory on 10.145.210.31:44263 (size: 1728.0 B, free: 786.3 MB)
+17/04/15 01:04:04 INFO BlockManagerMaster: Updated info of block rdd_218_0
+17/04/15 01:04:04 INFO Executor: Serialized size of result for 43 is 964
+17/04/15 01:04:04 INFO Executor: Sending result for 43 directly to driver
+17/04/15 01:04:04 INFO TaskSetManager: Finished TID 43 in 10 ms on localhost (progress: 0/1)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Remove TaskSet 249.0 from pool 
+17/04/15 01:04:04 INFO DAGScheduler: Completed ShuffleMapTask(249, 0)
+17/04/15 01:04:04 INFO DAGScheduler: Stage 249 (zipPartitions at GraphImpl.scala:218) finished in 0.011 s
+17/04/15 01:04:04 INFO DAGScheduler: looking for newly runnable stages
+17/04/15 01:04:04 INFO DAGScheduler: running: Set()
+17/04/15 01:04:04 INFO DAGScheduler: waiting: Set(Stage 218)
+17/04/15 01:04:04 INFO DAGScheduler: failed: Set()
+17/04/15 01:04:04 INFO DAGScheduler: Missing parents for Stage 218: List()
+17/04/15 01:04:04 INFO Executor: Finished task ID 43
+17/04/15 01:04:04 INFO DAGScheduler: Submitting Stage 218 (MappedRDD[224] at map at VertexRDD.scala:91), which is now runnable
+17/04/15 01:04:04 INFO DAGScheduler: Submitting 1 missing tasks from Stage 218 (MappedRDD[224] at map at VertexRDD.scala:91)
+17/04/15 01:04:04 INFO TaskSchedulerImpl: Adding task set 218.0 with 1 tasks
+17/04/15 01:04:04 INFO TaskSetManager: Starting task 218.0:0 as TID 44 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:04 INFO TaskSetManager: Serialized task 218.0:0 as 5606 bytes in 0 ms
+17/04/15 01:04:04 INFO Executor: Running task ID 44
+17/04/15 01:04:04 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:05 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:05 INFO CacheManager: Partition rdd_222_0 not found, computing it
+17/04/15 01:04:05 INFO BlockManager: Found block rdd_212_0 locally
+17/04/15 01:04:05 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Getting 1 non-zero-bytes blocks out of 1 blocks
+17/04/15 01:04:05 INFO BlockFetcherIterator$BasicBlockFetcherIterator: Started 0 remote gets in  0 ms
+17/04/15 01:04:05 INFO MemoryStore: ensureFreeSpace(1968) called with curMem=174045, maxMem=824495308
+17/04/15 01:04:05 INFO MemoryStore: Block rdd_222_0 stored as values to memory (estimated size 1968.0 B, free 786.1 MB)
+17/04/15 01:04:05 INFO BlockManagerMasterActor$BlockManagerInfo: Added rdd_222_0 in memory on 10.145.210.31:44263 (size: 1968.0 B, free: 786.3 MB)
+17/04/15 01:04:05 INFO BlockManagerMaster: Updated info of block rdd_222_0
+17/04/15 01:04:05 INFO Executor: Serialized size of result for 44 is 933
+17/04/15 01:04:05 INFO Executor: Sending result for 44 directly to driver
+17/04/15 01:04:05 INFO TaskSetManager: Finished TID 44 in 9 ms on localhost (progress: 0/1)
+17/04/15 01:04:05 INFO TaskSchedulerImpl: Remove TaskSet 218.0 from pool 
+17/04/15 01:04:05 INFO Executor: Finished task ID 44
+17/04/15 01:04:05 INFO DAGScheduler: Completed ResultTask(218, 0)
+17/04/15 01:04:05 INFO DAGScheduler: Stage 218 (reduce at VertexRDD.scala:91) finished in 0.009 s
+17/04/15 01:04:05 INFO SparkContext: Job finished: reduce at VertexRDD.scala:91, took 0.075492253 s
+17/04/15 01:04:05 INFO ZippedPartitionsRDD2: Removing RDD 181 from persistence list
+17/04/15 01:04:05 INFO BlockManager: Removing RDD 181
+17/04/15 01:04:05 INFO MappedRDD: Removing RDD 210 from persistence list
+17/04/15 01:04:05 INFO BlockManager: Removing block rdd_181_0
+17/04/15 01:04:05 INFO MemoryStore: Block rdd_181_0 of size 1968 dropped from memory (free 824321263)
+17/04/15 01:04:05 INFO ZippedPartitionsRDD2: Removing RDD 171 from persistence list
+17/04/15 01:04:05 INFO BlockManager: Removing RDD 210
+17/04/15 01:04:05 INFO BlockManager: Removing block rdd_210_0
+17/04/15 01:04:05 INFO ZippedPartitionsRDD2: Removing RDD 177 from persistence list
+17/04/15 01:04:05 INFO MemoryStore: Block rdd_210_0 of size 976 dropped from memory (free 824322239)
+17/04/15 01:04:05 INFO BlockManager: Removing RDD 171
+17/04/15 01:04:05 INFO BlockManager: Removing block rdd_171_0
+17/04/15 01:04:05 INFO MemoryStore: Block rdd_171_0 of size 1608 dropped from memory (free 824323847)
+17/04/15 01:04:05 INFO BlockManager: Removing RDD 177
+17/04/15 01:04:05 INFO BlockManager: Removing block rdd_177_0
+17/04/15 01:04:05 INFO MemoryStore: Block rdd_177_0 of size 1728 dropped from memory (free 824325575)
+17/04/15 01:04:05 INFO ZippedPartitionsRDD2: Removing RDD 227 from persistence list
+17/04/15 01:04:05 INFO BlockManager: Removing RDD 227
+17/04/15 01:04:05 INFO ZippedPartitionsRDD2: Removing RDD 230 from persistence list
+17/04/15 01:04:05 INFO BlockManager: Removing RDD 230
+17/04/15 01:04:05 INFO ZippedPartitionsRDD2: Removing RDD 233 from persistence list
+17/04/15 01:04:05 INFO BlockManager: Removing RDD 233
+17/04/15 01:04:05 INFO SparkContext: Starting job: reduce at VertexRDD.scala:91
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 3 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 2 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 5 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 7 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 6 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 4 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 8 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 10 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 9 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 11 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 13 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 12 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 14 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 16 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 15 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 17 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 19 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 18 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 20 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 22 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 21 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 23 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 25 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 24 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 26 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 28 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 27 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 29 is 136 bytes
+17/04/15 01:04:05 INFO DAGScheduler: Got job 13 (reduce at VertexRDD.scala:91) with 1 output partitions (allowLocal=false)
+17/04/15 01:04:05 INFO DAGScheduler: Final stage: Stage 251 (reduce at VertexRDD.scala:91)
+17/04/15 01:04:05 INFO DAGScheduler: Parents of final stage: List(Stage 252, Stage 270, Stage 256, Stage 253, Stage 264, Stage 276)
+17/04/15 01:04:05 INFO DAGScheduler: Missing parents: List()
+17/04/15 01:04:05 INFO DAGScheduler: Submitting Stage 251 (MappedRDD[236] at map at VertexRDD.scala:91), which has no missing parents
+17/04/15 01:04:05 INFO DAGScheduler: Submitting 1 missing tasks from Stage 251 (MappedRDD[236] at map at VertexRDD.scala:91)
+17/04/15 01:04:05 INFO TaskSchedulerImpl: Adding task set 251.0 with 1 tasks
+17/04/15 01:04:05 INFO TaskSetManager: Starting task 251.0:0 as TID 45 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:05 INFO TaskSetManager: Serialized task 251.0:0 as 5490 bytes in 0 ms
+17/04/15 01:04:05 INFO Executor: Running task ID 45
+17/04/15 01:04:05 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:05 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:05 INFO BlockManager: Found block rdd_212_0 locally
+17/04/15 01:04:05 INFO Executor: Serialized size of result for 45 is 641
+17/04/15 01:04:05 INFO Executor: Sending result for 45 directly to driver
+17/04/15 01:04:05 INFO Executor: Finished task ID 45
+17/04/15 01:04:05 INFO TaskSetManager: Finished TID 45 in 7 ms on localhost (progress: 0/1)
+17/04/15 01:04:05 INFO TaskSchedulerImpl: Remove TaskSet 251.0 from pool 
+17/04/15 01:04:05 INFO DAGScheduler: Completed ResultTask(251, 0)
+17/04/15 01:04:05 INFO DAGScheduler: Stage 251 (reduce at VertexRDD.scala:91) finished in 0.006 s
+17/04/15 01:04:05 INFO SparkContext: Job finished: reduce at VertexRDD.scala:91, took 0.022171159 s
+17/04/15 01:04:05 INFO SparkContext: Starting job: reduce at LouvainCore.scala:154
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 31 is 136 bytes
+17/04/15 01:04:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 30 is 136 bytes
+17/04/15 01:04:05 INFO DAGScheduler: Got job 14 (reduce at LouvainCore.scala:154) with 1 output partitions (allowLocal=false)
+17/04/15 01:04:05 INFO DAGScheduler: Final stage: Stage 282 (reduce at LouvainCore.scala:154)
+17/04/15 01:04:05 INFO DAGScheduler: Parents of final stage: List(Stage 287, Stage 284, Stage 307, Stage 283, Stage 301, Stage 295, Stage 313)
+17/04/15 01:04:05 INFO DAGScheduler: Missing parents: List()
+17/04/15 01:04:05 INFO DAGScheduler: Submitting Stage 282 (MappedRDD[239] at values at LouvainCore.scala:154), which has no missing parents
+17/04/15 01:04:05 INFO DAGScheduler: Submitting 1 missing tasks from Stage 282 (MappedRDD[239] at values at LouvainCore.scala:154)
+17/04/15 01:04:05 INFO TaskSchedulerImpl: Adding task set 282.0 with 1 tasks
+17/04/15 01:04:05 INFO TaskSetManager: Starting task 282.0:0 as TID 46 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:05 INFO TaskSetManager: Serialized task 282.0:0 as 5686 bytes in 0 ms
+17/04/15 01:04:05 INFO Executor: Running task ID 46
+17/04/15 01:04:05 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:05 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:05 INFO BlockManager: Found block rdd_212_0 locally
+17/04/15 01:04:05 INFO BlockManager: Found block rdd_222_0 locally
+17/04/15 01:04:05 INFO Executor: Serialized size of result for 46 is 644
+17/04/15 01:04:05 INFO Executor: Sending result for 46 directly to driver
+17/04/15 01:04:05 INFO TaskSetManager: Finished TID 46 in 8 ms on localhost (progress: 0/1)
+17/04/15 01:04:05 INFO TaskSchedulerImpl: Remove TaskSet 282.0 from pool 
+17/04/15 01:04:05 INFO Executor: Finished task ID 46
+17/04/15 01:04:05 INFO DAGScheduler: Completed ResultTask(282, 0)
+17/04/15 01:04:05 INFO DAGScheduler: Stage 282 (reduce at LouvainCore.scala:154) finished in 0.009 s
+17/04/15 01:04:05 INFO SparkContext: Job finished: reduce at LouvainCore.scala:154, took 0.022793402 s
+17/04/15 01:04:05 INFO ZippedPartitionsRDD2: Removing RDD 35 from persistence list
+17/04/15 01:04:05 INFO BlockManager: Removing RDD 35
+17/04/15 01:04:05 INFO ZippedPartitionsRDD2: Removing RDD 61 from persistence list
+17/04/15 01:04:05 INFO BlockManager: Removing RDD 61
+17/04/15 01:04:05 INFO ZippedPartitionsRDD2: Removing RDD 104 from persistence list
+17/04/15 01:04:05 INFO BlockManager: Removing RDD 104
+17/04/15 01:04:05 INFO ZippedPartitionsRDD2: Removing RDD 107 from persistence list
+17/04/15 01:04:05 INFO BlockManager: Removing RDD 107
+17/04/15 01:04:05 INFO ZippedPartitionsRDD2: Removing RDD 110 from persistence list
+17/04/15 01:04:05 INFO BlockManager: Removing RDD 110
+17/04/15 01:04:05 INFO deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id
+17/04/15 01:04:05 INFO deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+17/04/15 01:04:05 INFO deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+17/04/15 01:04:05 INFO deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+17/04/15 01:04:05 INFO deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+17/04/15 01:04:05 INFO SparkContext: Starting job: saveAsTextFile at HDFSLouvainRunner.scala:18
+17/04/15 01:04:05 INFO DAGScheduler: Got job 15 (saveAsTextFile at HDFSLouvainRunner.scala:18) with 1 output partitions (allowLocal=false)
+17/04/15 01:04:05 INFO DAGScheduler: Final stage: Stage 315 (saveAsTextFile at HDFSLouvainRunner.scala:18)
+17/04/15 01:04:05 INFO DAGScheduler: Parents of final stage: List(Stage 320, Stage 317, Stage 328, Stage 340, Stage 316, Stage 334)
+17/04/15 01:04:05 INFO DAGScheduler: Missing parents: List()
+17/04/15 01:04:05 INFO DAGScheduler: Submitting Stage 315 (MappedRDD[240] at saveAsTextFile at HDFSLouvainRunner.scala:18), which has no missing parents
+17/04/15 01:04:05 INFO DAGScheduler: Submitting 1 missing tasks from Stage 315 (MappedRDD[240] at saveAsTextFile at HDFSLouvainRunner.scala:18)
+17/04/15 01:04:05 INFO TaskSchedulerImpl: Adding task set 315.0 with 1 tasks
+17/04/15 01:04:05 INFO TaskSetManager: Starting task 315.0:0 as TID 47 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:05 INFO TaskSetManager: Serialized task 315.0:0 as 15605 bytes in 0 ms
+17/04/15 01:04:05 INFO Executor: Running task ID 47
+17/04/15 01:04:05 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:05 INFO BlockManager: Found block broadcast_1 locally
+17/04/15 01:04:05 INFO BlockManager: Found block rdd_212_0 locally
+17/04/15 01:04:05 INFO FileOutputCommitter: Saved output of task 'attempt_201704150104_0000_m_000000_47' to file:/home/kaustubh/GitHub/2others/spark-distributed-louvain-modularity/dga-graphx/test_output/level_0_vertices/_temporary/0/task_201704150104_0000_m_000000
+17/04/15 01:04:05 INFO SparkHadoopWriter: attempt_201704150104_0000_m_000000_47: Committed
+17/04/15 01:04:05 INFO Executor: Serialized size of result for 47 is 525
+17/04/15 01:04:05 INFO Executor: Sending result for 47 directly to driver
+17/04/15 01:04:05 INFO Executor: Finished task ID 47
+17/04/15 01:04:05 INFO TaskSetManager: Finished TID 47 in 72 ms on localhost (progress: 0/1)
+17/04/15 01:04:05 INFO TaskSchedulerImpl: Remove TaskSet 315.0 from pool 
+17/04/15 01:04:05 INFO DAGScheduler: Completed ResultTask(315, 0)
+17/04/15 01:04:05 INFO DAGScheduler: Stage 315 (saveAsTextFile at HDFSLouvainRunner.scala:18) finished in 0.071 s
+17/04/15 01:04:05 INFO SparkContext: Job finished: saveAsTextFile at HDFSLouvainRunner.scala:18, took 0.103678741 s
+17/04/15 01:04:05 INFO SparkContext: Starting job: saveAsTextFile at HDFSLouvainRunner.scala:19
+17/04/15 01:04:05 INFO DAGScheduler: Got job 16 (saveAsTextFile at HDFSLouvainRunner.scala:19) with 1 output partitions (allowLocal=false)
+17/04/15 01:04:05 INFO DAGScheduler: Final stage: Stage 346 (saveAsTextFile at HDFSLouvainRunner.scala:19)
+17/04/15 01:04:05 INFO DAGScheduler: Parents of final stage: List(Stage 347)
+17/04/15 01:04:05 INFO DAGScheduler: Missing parents: List()
+17/04/15 01:04:05 INFO DAGScheduler: Submitting Stage 346 (MappedRDD[241] at saveAsTextFile at HDFSLouvainRunner.scala:19), which has no missing parents
+17/04/15 01:04:05 INFO DAGScheduler: Submitting 1 missing tasks from Stage 346 (MappedRDD[241] at saveAsTextFile at HDFSLouvainRunner.scala:19)
+17/04/15 01:04:05 INFO TaskSchedulerImpl: Adding task set 346.0 with 1 tasks
+17/04/15 01:04:05 INFO TaskSetManager: Starting task 346.0:0 as TID 48 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:05 INFO TaskSetManager: Serialized task 346.0:0 as 12257 bytes in 0 ms
+17/04/15 01:04:05 INFO Executor: Running task ID 48
+17/04/15 01:04:05 INFO BlockManager: Found block broadcast_0 locally
+17/04/15 01:04:05 INFO BlockManager: Found block rdd_63_0 locally
+17/04/15 01:04:05 INFO FileOutputCommitter: Saved output of task 'attempt_201704150104_0000_m_000000_48' to file:/home/kaustubh/GitHub/2others/spark-distributed-louvain-modularity/dga-graphx/test_output/level_0_edges/_temporary/0/task_201704150104_0000_m_000000
+17/04/15 01:04:05 INFO SparkHadoopWriter: attempt_201704150104_0000_m_000000_48: Committed
+17/04/15 01:04:05 INFO Executor: Serialized size of result for 48 is 525
+17/04/15 01:04:05 INFO Executor: Sending result for 48 directly to driver
+17/04/15 01:04:05 INFO Executor: Finished task ID 48
+17/04/15 01:04:05 INFO TaskSetManager: Finished TID 48 in 40 ms on localhost (progress: 0/1)
+17/04/15 01:04:05 INFO TaskSchedulerImpl: Remove TaskSet 346.0 from pool 
+17/04/15 01:04:05 INFO DAGScheduler: Completed ResultTask(346, 0)
+17/04/15 01:04:05 INFO DAGScheduler: Stage 346 (saveAsTextFile at HDFSLouvainRunner.scala:19) finished in 0.040 s
+17/04/15 01:04:05 INFO SparkContext: Job finished: saveAsTextFile at HDFSLouvainRunner.scala:19, took 0.052597023 s
+17/04/15 01:04:05 INFO SparkContext: Starting job: saveAsTextFile at HDFSLouvainRunner.scala:26
+17/04/15 01:04:05 INFO DAGScheduler: Got job 17 (saveAsTextFile at HDFSLouvainRunner.scala:26) with 1 output partitions (allowLocal=false)
+17/04/15 01:04:05 INFO DAGScheduler: Final stage: Stage 348 (saveAsTextFile at HDFSLouvainRunner.scala:26)
+17/04/15 01:04:05 INFO DAGScheduler: Parents of final stage: List()
+17/04/15 01:04:05 INFO DAGScheduler: Missing parents: List()
+17/04/15 01:04:05 INFO DAGScheduler: Submitting Stage 348 (MappedRDD[243] at saveAsTextFile at HDFSLouvainRunner.scala:26), which has no missing parents
+17/04/15 01:04:05 INFO DAGScheduler: Submitting 1 missing tasks from Stage 348 (MappedRDD[243] at saveAsTextFile at HDFSLouvainRunner.scala:26)
+17/04/15 01:04:05 INFO TaskSchedulerImpl: Adding task set 348.0 with 1 tasks
+17/04/15 01:04:05 INFO TaskSetManager: Starting task 348.0:0 as TID 49 on executor localhost: localhost (PROCESS_LOCAL)
+17/04/15 01:04:05 INFO TaskSetManager: Serialized task 348.0:0 as 11588 bytes in 0 ms
+17/04/15 01:04:05 INFO Executor: Running task ID 49
+17/04/15 01:04:05 INFO FileOutputCommitter: Saved output of task 'attempt_201704150104_0000_m_000000_49' to file:/home/kaustubh/GitHub/2others/spark-distributed-louvain-modularity/dga-graphx/test_output/qvalues/_temporary/0/task_201704150104_0000_m_000000
+17/04/15 01:04:05 INFO SparkHadoopWriter: attempt_201704150104_0000_m_000000_49: Committed
+17/04/15 01:04:05 INFO Executor: Serialized size of result for 49 is 525
+17/04/15 01:04:05 INFO Executor: Sending result for 49 directly to driver
+17/04/15 01:04:05 INFO Executor: Finished task ID 49
+17/04/15 01:04:05 INFO TaskSetManager: Finished TID 49 in 39 ms on localhost (progress: 0/1)
+17/04/15 01:04:05 INFO DAGScheduler: Completed ResultTask(348, 0)
+17/04/15 01:04:05 INFO TaskSchedulerImpl: Remove TaskSet 348.0 from pool 
+17/04/15 01:04:05 INFO DAGScheduler: Stage 348 (saveAsTextFile at HDFSLouvainRunner.scala:26) finished in 0.039 s
+17/04/15 01:04:05 INFO SparkContext: Job finished: saveAsTextFile at HDFSLouvainRunner.scala:26, took 0.05910864 s
