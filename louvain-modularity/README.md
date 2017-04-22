@@ -1,14 +1,16 @@
-# dga-graphx 
+# dga-graphx
 
 - GraphX Algorithms
+
+We have modified [existing code](https://github.com/Sotera/distributed-graph-analytics) for louvain modularity to suit the purpose of our community detection. Our thanks goes to the team who've made their code available for us to use.
 
 The dga-graphX package contains several pre-built executable graph algorithms built on Spark using the GraphX framework.  
 
 ### pre-requisites
 
- * [Spark]  (http://spark.apache.org/)   0.9.0 or later
- * [graphX]  (http://spark.apache.org/docs/latest/graphx-programming-guide.html)   
- * [Gradle] (http://www.gradle.org/) 
+ * [Spark](http://spark.apache.org/)   0.9.0 or later
+ * [graphX](http://spark.apache.org/docs/latest/graphx-programming-guide.html)   
+ * [Gradle](http://www.gradle.org/)
 
 ### build
 
@@ -19,7 +21,7 @@ If necessary edit the build.gradle file to set your version of spark and graphX
 Check the build/dist folder for dga-graphx-0.1.jar.   
 
 
-# Algorithms 
+# Algorithms
 
 ## Louvain
 
@@ -27,8 +29,8 @@ Check the build/dist folder for dga-graphx-0.1.jar.
 
 Louvain distributed community detection is a parallelized version of this work:
 ```
-Fast unfolding of communities in large networks, 
-Vincent D Blondel, Jean-Loup Guillaume, Renaud Lambiotte, Etienne Lefebvre, 
+Fast unfolding of communities in large networks,
+Vincent D Blondel, Jean-Loup Guillaume, Renaud Lambiotte, Etienne Lefebvre,
 Journal of Statistical Mechanics: Theory and Experiment 2008 (10), P10008 (12pp)
 ```
 In the original algorithm each vertex examines the communities of its neighbors and makes a chooses a new community based on a function to maximize the calculated change in modularity.  In the distributed version all vertices make this choice simultaneously rather than in serial order, updating the graph state after each change.  Because choices are made in parallel some choice will be incorrect and will not maximize modularity values, however after repeated iterations community choices become more stable and we get results that closely mirror the serial algorithm.
@@ -88,7 +90,7 @@ test_output/
 ```
 
 ```
-cat test_output/level_0_vertices/part-00000 
+cat test_output/level_0_vertices/part-00000
 (7,{community:8,communitySigmaTot:13,internalWeight:0,nodeWeight:3})
 (4,{community:4,communitySigmaTot:21,internalWeight:0,nodeWeight:4})
 (2,{community:4,communitySigmaTot:21,internalWeight:0,nodeWeight:4})
@@ -99,7 +101,7 @@ cat test_output/level_0_vertices/part-00000
 (3,{community:4,communitySigmaTot:21,internalWeight:0,nodeWeight:4})
 (1,{community:4,communitySigmaTot:21,internalWeight:0,nodeWeight:5})
 
-cat test_output/qvalues/part-00000 
+cat test_output/qvalues/part-00000
 (0,0.4134948096885813)
 ```
 
@@ -117,4 +119,3 @@ To change the level of parallelism use the -p or --parallelism option.  If this 
 ### advanced
 
 If you would like to include the louvain algorithm in your own compute pipeline or create a custom output format, etc you can easily do so by extending the com.soteradefense.dga.graphx.louvain.LouvainHarness class.  See HDFSLouvainRunner which extends LouvainHarness and is called by Main for the example above
-

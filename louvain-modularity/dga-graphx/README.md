@@ -6,9 +6,9 @@ The dga-graphX package contains several pre-built executable graph algorithms bu
 
 ### pre-requisites
 
- * [Spark]  (http://spark.apache.org/)   0.9.0 or later
- * [graphX]  (http://spark.apache.org/docs/latest/graphx-programming-guide.html)   
- * [Gradle] (http://www.gradle.org/) 
+ * [Spark](http://spark.apache.org/)   0.9.0 or later
+ * [graphX](http://spark.apache.org/docs/latest/graphx-programming-guide.html)   
+ * [Gradle](http://www.gradle.org/) 
 
 ### build
 

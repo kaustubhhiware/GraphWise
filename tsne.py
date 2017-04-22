@@ -1,6 +1,3 @@
-#
-#  tsne.py
-#
 # Implementation of t-SNE in Python. The implementation was tested on Python 2.7.10, and it requires a working
 # installation of NumPy. The implementation comes with an example on the MNIST dataset. In order to plot the
 # results of this example, a working installation of matplotlib is required.
@@ -124,7 +121,7 @@ def tsne(X = np.array([]), no_dims = 2, initial_dims = 50, perplexity = 30.0):
 	dY = np.zeros((n, no_dims));
 	iY = np.zeros((n, no_dims));
 	gains = np.ones((n, no_dims));
-	
+
 	# Compute P-values
 	P = x2p(X, 1e-5, perplexity);
 	P = P + np.transpose(P);
